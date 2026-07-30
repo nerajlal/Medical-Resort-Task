@@ -1,0 +1,16 @@
+.footer-cta {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-desc {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  font-size: 1rem;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

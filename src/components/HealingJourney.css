@@ -1,0 +1,108 @@
+.journey {
+  background-color: var(--bg-light);
+}
+
+.journey-timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 60px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 45px; /* Center of the circle */
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+.journey-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  padding: 0 10px;
+}
+
+.step-circle {
+  width: 90px;
+  height: 90px;
+  background-color: var(--white);
+  border: 2px solid var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.journey-step:hover .step-circle {
+  background-color: var(--primary-green);
+}
+
+.journey-step:hover .step-number {
+  color: var(--white);
+}
+
+.step-number {
+  color: var(--primary-green);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.step-title {
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.hover-green:hover {
+  background-color: var(--primary-green);
+}
+
+@media (max-width: 768px) {
+  .journey-timeline {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+  }
+  .timeline-line {
+    top: 0;
+    bottom: 0;
+    left: 75px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+  .journey-step {
+    flex-direction: row;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .step-circle {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+}

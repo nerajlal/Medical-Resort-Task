@@ -1,0 +1,130 @@
+:root {
+  --primary-dark: #2a3c36;
+  --primary-green: #85c249;
+  --btn-green: #d1dc49;
+  --bg-light: #f5f6f4;
+  --text-dark: #222222;
+  --text-light: #666666;
+  --white: #ffffff;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-primary-green {
+  color: var(--primary-green);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: var(--btn-green);
+  color: var(--primary-dark);
+}
+
+.btn-primary:hover {
+  filter: brightness(0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(133, 194, 73, 0.3);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline-dark {
+  background-color: transparent;
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--primary-dark);
+}
+
+.section-title.light {
+  color: var(--white);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+@media (max-width: 900px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .section-padding {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .section-padding {
+    padding: 40px 0;
+  }
+}

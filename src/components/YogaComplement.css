@@ -1,0 +1,77 @@
+.yoga {
+  background-color: var(--bg-light);
+}
+
+.yoga-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.yoga-desc {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.yoga-features {
+  display: flex;
+  gap: 60px;
+  margin: 30px 0;
+}
+
+.yoga-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.yoga-features li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.yoga-features li::before {
+  content: "•";
+  color: var(--primary-green);
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+.yoga-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.yoga-link:hover {
+  color: var(--primary-green);
+}
+
+.yoga-image-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.yoga-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .yoga-container {
+    grid-template-columns: 1fr;
+  }
+}

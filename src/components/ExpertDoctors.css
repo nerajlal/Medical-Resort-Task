@@ -1,0 +1,90 @@
+.doctors {
+  background-color: var(--white);
+}
+
+.doctors-slider {
+  overflow: hidden;
+  padding: 20px 0; /* Extra top/bottom padding so scaled cards aren't clipped */
+}
+
+.doctors-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: scroll-doctors 40s linear infinite;
+}
+
+.doctors-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-doctors {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 20px)); } /* Half the track minus half the gap */
+}
+
+.doctor-card {
+  text-align: center;
+  width: 180px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.doctor-card:hover {
+  transform: scale(1.08);
+  z-index: 10;
+}
+
+.doc-image-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px auto;
+}
+
+.doc-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  border: 4px solid var(--white);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+.doc-badge {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-green);
+  color: var(--white);
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.doc-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 2px;
+}
+
+.doc-quals {
+  font-size: 0.75rem;
+  color: var(--primary-green);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.doc-role {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  line-height: 1.3;
+}
+
+

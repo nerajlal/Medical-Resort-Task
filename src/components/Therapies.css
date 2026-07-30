@@ -1,0 +1,81 @@
+.therapies-desc {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+}
+
+.therapies-slider {
+  overflow: hidden;
+  padding: 20px 0; /* Extra top/bottom padding so scaled cards aren't clipped */
+}
+
+.therapies-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll-therapies 30s linear infinite;
+}
+
+.therapies-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-therapies {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 10px)); } /* Half the track width minus half the gap */
+}
+
+.therapy-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 350px;
+  width: 250px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.therapy-card:hover {
+  transform: scale(1.08);
+  z-index: 10;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.therapy-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.therapy-card:hover .therapy-image {
+  transform: none;
+}
+
+.therapy-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 20px 20px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.therapy-title {
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .therapies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .therapies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

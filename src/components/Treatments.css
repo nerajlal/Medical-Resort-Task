@@ -1,0 +1,106 @@
+.treatments {
+  background-color: var(--bg-light);
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.treatment-card {
+  background-color: var(--white);
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+@media (min-width: 1025px) {
+  .treatments-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .treatment-card {
+    padding: 30px 20px;
+  }
+
+  /* Make first and last cards wide to create an uneven look without adding height */
+  .treatment-card:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .treatment-card:nth-child(8) {
+    grid-column: span 2;
+  }
+}
+
+.treatment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(133, 194, 73, 0.15);
+  border-color: var(--primary-green);
+}
+
+.treatment-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(133, 194, 73, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  transition: all 0.3s ease;
+}
+
+.treatment-card:hover .treatment-icon-wrapper {
+  background-color: var(--primary-green);
+  transform: scale(1.1);
+}
+
+.treatment-card:hover .treatment-icon-wrapper svg {
+  color: var(--white) !important;
+  stroke: var(--white) !important;
+}
+
+.treatment-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.treatment-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 1024px) {
+  .treatments-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .treatments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .treatments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

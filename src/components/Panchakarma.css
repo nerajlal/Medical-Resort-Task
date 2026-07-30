@@ -1,0 +1,152 @@
+.panchakarma {
+  background-color: var(--white);
+}
+
+.panchakarma-header {
+  margin-bottom: 40px;
+}
+
+.panchakarma-desc {
+  max-width: 700px;
+  color: var(--text-light);
+  margin-top: 15px;
+}
+
+.panchakarma-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.tab-content {
+  width: 100%;
+}
+
+.tab-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  min-height: 400px;
+}
+
+.tab-text-content {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tab-index {
+  color: var(--primary-green);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.tab-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.tab-details {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.tab-image-wrapper {
+  height: 100%;
+}
+
+.tab-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Vertical Tabs on Right */
+.vertical-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.v-tab-btn {
+  background-color: var(--bg-light);
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.v-tab-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.v-tab-number {
+  color: var(--primary-green);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.v-tab-label {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.v-tab-arrow {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.v-tab-btn:hover {
+  border-color: var(--primary-green);
+  transform: translateX(-5px);
+}
+
+.v-tab-btn.active {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.v-tab-btn.active .v-tab-label, 
+.v-tab-btn.active .v-tab-number,
+.v-tab-btn.active .v-tab-arrow {
+  color: var(--white);
+}
+
+.v-tab-btn.active .v-tab-arrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 1024px) {
+  .panchakarma-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-card {
+    grid-template-columns: 1fr;
+  }
+  .tab-image-wrapper {
+    height: 300px;
+  }
+}
