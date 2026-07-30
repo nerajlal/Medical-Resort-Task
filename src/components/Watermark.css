@@ -1,0 +1,19 @@
+.watermark-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff3b30;
+  color: white;
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 9999;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.watermark-banner p {
+  margin: 0;
+}

@@ -15,10 +15,11 @@ import FAQ from './components/FAQ';
 import FooterCTA from './components/FooterCTA';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import Watermark from './components/Watermark';
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Navbar />
       <Hero />
       <Stats />
@@ -35,7 +36,8 @@ function App() {
       <FooterCTA />
       <Footer />
       <FloatingWhatsApp />
-    </>
+      <Watermark />
+    </div>
   );
 }
 
