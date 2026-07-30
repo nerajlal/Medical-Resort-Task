@@ -11,9 +11,19 @@
   font-weight: 500;
   z-index: 9999;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-  pointer-events: none;
 }
 
 .watermark-banner p {
   margin: 0;
+}
+
+.watermark-link {
+  color: white;
+  text-decoration: underline;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.watermark-link:hover {
+  color: #ffcccc;
 }
