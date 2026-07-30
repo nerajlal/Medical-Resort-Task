@@ -2,10 +2,10 @@ import React from 'react';
 import './Gallery.css';
 
 const galleryImages = [
-  { src: 'https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop/q_80,w_900,dpr_1,f_auto,fl_progressive,c_limit/ayur-on-the-beach-nattika/resort-grounds-6_44d05225.jpg', alt: 'Resort Exterior', size: 'large' },
-  { src: 'https://pix10.agoda.net/hotelImages/810081/4031233/d01423257df43bea8da4abacbdedd3b1.jpeg?ce=0&s=414x232', alt: 'Guest Room', size: 'tall' },
-  { src: 'https://www.shutterstock.com/image-photo/create-image-premium-indian-ayurveda-260nw-2650439271.jpg', alt: 'Treatment Room', size: 'small' },
-  { src: 'https://framerusercontent.com/images/AzH0lT2IVr78344ZlFgtYcnvDY.webp?width=940&height=570', alt: 'Ayurvedic Oils', size: 'small' },
+  { src: '/images/resort_exterior.jpg', alt: 'Resort Exterior', size: 'large' },
+  { src: '/images/guest_room.jpg', alt: 'Guest Room', size: 'tall' },
+  { src: '/images/treatment_room.jpg', alt: 'Treatment Room', size: 'small' },
+  { src: '/images/oils.webp', alt: 'Ayurvedic Oils', size: 'small' },
 ];
 
 const Gallery = () => {
