@@ -31,7 +31,7 @@ const Panchakarma = () => {
               </div>
               <div className="tab-image-wrapper">
                 <img 
-                  src="/images/kerala_houseboat_1785412368231.png" 
+                  src={panchakarmaTabs[activeIndex].image} 
                   alt={panchakarmaTabs[activeIndex].label}
                   className="tab-image"
                 />
